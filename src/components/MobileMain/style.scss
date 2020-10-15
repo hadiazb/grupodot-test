@@ -1,0 +1,27 @@
+.mobile {
+	position: absolute;
+	top: 55px;
+	width: 100%;
+	height: calc(100vh - 55px);
+	background-color: rgba(0, 0, 0, 0.3);
+
+	&__main {
+		width: 240px;
+		height: 100%;
+		padding: 40px 0;
+		background-color: rgba(255, 255, 255, 1);
+		box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.6);
+
+		& li {
+			padding-left: 30px;
+			height: 30px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			&:hover {
+				background-color: rgb(218, 227, 240);
+			}
+		}
+	}
+}

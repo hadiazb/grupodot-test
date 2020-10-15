@@ -1,0 +1,27 @@
+.main {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 55px;
+	background-color: rgb(20, 111, 196);
+	box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.6);
+	z-index: 10;
+	color: white;
+
+	&__menu {
+		padding-top: 3px;
+		padding-right: 20px;
+		cursor: pointer;
+	}
+
+	& a {
+		height: 55px;
+		display: flex;
+		align-items: center;
+		padding-right: 20px;
+		font-size: 1.4em;
+		font-weight: 700;
+		color: white;
+	}
+}
