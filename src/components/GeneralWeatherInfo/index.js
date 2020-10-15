@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './style.scss';
 import { TiWeatherCloudy } from 'react-icons/ti';
 import { connect } from 'react-redux';
 
 const GeneralWeatherInfo = (props) => {
 	const { city, loading, error } = props;
-
-	console.log('Ciudad', city);
 
 	const putContent = () => {
 		if (loading) {
@@ -63,12 +61,6 @@ const GeneralWeatherInfo = (props) => {
 			</div>
 		);
 	};
-
-	useEffect(() => {
-		// if (!users.length) {
-		// 	getAll();
-		// }
-	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return (
 		<div className='information contenedor'>
