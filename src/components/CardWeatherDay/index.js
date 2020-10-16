@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.scss';
 import {
 	// TiWeatherPartlySunny,
@@ -17,42 +17,63 @@ const CardWeatherDay = (props) => {
 		cityReducer,
 	} = props;
 
-	const [cityName, setCityName] = useState(
-		cityReducer.city[0].name
-	);
-
-	useEffect(() => {
-		if (cityReducer.city[0].name !== 'Bogotá') {
-			getHistoryCity(cityReducer.city[0].name);
-		}
-	}, []); // eslint-disable-line react-hooks/exhaustive-deps
-
 	const data = [];
 
-	for (let i = 0; i < 7; i++) {
-		data.push({
-			id: i + 1,
-			date:
-				new Date(history[0].list[i].dt_txt).getDate() +
-				'/' +
-				new Date(history[0].list[i].dt_txt).getMonth() +
-				'/' +
-				new Date().getFullYear(),
-			hour:
-				new Date(history[0].list[i].dt_txt).getHours() +
-				' Hours',
-			icon: <TiWeatherCloudy size='50' />,
-			temp: history[0].list[i].main.temp,
-			clima: history[0].list[i].weather[0].description,
-		});
-	}
+	// for (let i = 0; i < 7; i++) {
+	// 	data.push({
+	// 		id: i + 1,
+	// 		date:
+	// 			new Date(history[0].list[i].dt_txt).getDate() +
+	// 			'/' +
+	// 			new Date(history[0].list[i].dt_txt).getMonth() +
+	// 			'/' +
+	// 			new Date().getFullYear(),
+	// 		hour:
+	// 			new Date(history[0].list[i].dt_txt).getHours() +
+	// 			' Hours',
+	// 		icon: <TiWeatherCloudy size='50' />,
+	// 		temp: history[0].list[i].main.temp,
+	// 		clima: history[0].list[i].weather[0].description,
+	// 	});
+	// }
+	const [name, setName] = useState('Bogota');
+	const [Data, setData] = useState(data);
 
-	console.log(props, cityName);
+	useEffect(() => {
+		const setCityName = async () => {
+			if (name === 'Bogotá') {
+				await setName(cityReducer.city[0].name);
+			}
+			for (let i = 0; i < 7; i++) {
+				data.push({
+					id: i + 1,
+					date:
+						new Date(history[0].list[i].dt_txt).getDate() +
+						'/' +
+						new Date(history[0].list[i].dt_txt).getMonth() +
+						'/' +
+						new Date().getFullYear(),
+					hour:
+						new Date(history[0].list[i].dt_txt).getHours() +
+						' Hours',
+					icon: <TiWeatherCloudy size='50' />,
+					temp: history[0].list[i].main.temp,
+					clima: history[0].list[i].weather[0].description,
+				});
+			}
+			setData(data);
+		};
+
+		setCityName();
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+	console.log(Data);
+	// console.log(history[0].list);
 
 	return (
 		<div className='contenedor cardDay'>
 			<ul className='cardDay__list'>
-				{data.map((item) => (
+				{Data.map((item) => (
 					<li className='cardDay__list-item' key={item.id}>
 						<h6>{item.date}</h6>
 						<h6>{item.hour}</h6>
