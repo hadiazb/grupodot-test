@@ -23,7 +23,6 @@ Las herramientas empleadas en este proyecto son listadas a continuación:
 - React-router para gestionar las rutas de la app
 - Redux, estado global de la aplicación
 - NPM, node, gestor de paquetes y dependencias
-- Google maps, con API_KEY suministrada por el cliente.
 - API data suministrada por el cliente: https://openweathermap.org/price#weather
 - Postman, para descripción de API
 
