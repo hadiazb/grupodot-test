@@ -48,7 +48,7 @@ Las API y recursos se encuentran en los siguientes links
 
 Si no pudiste ejecutar el proyecto en local puedes contactarme con mis datsos de contacto que se encuentran al final del repo, por lo pronto puedes ver la aplicación en producción usando este link.
 
-https://grupodot.vercel.app/
+https://grupodot-test.vercel.app/
 
 ### Contacto
 
