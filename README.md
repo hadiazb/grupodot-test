@@ -1,14 +1,21 @@
 # Contenido
 
 - Descripción del proyecto
+- Procedimiento para deploy
 - Herramientas Usadas
 - Versión y licencia
 - API
-- Procedimiento para deploy
+
 
 ## Descripción del proyecto
 
 Aplicación para determinar el estado del clima en cualquier ciudad que el usuario final ingrese
+
+## Liga del Proyecto corriendo en producción en un servidor de Vercel.
+
+Si no pudiste ejecutar el proyecto en local puedes contactarme con mis datsos de contacto que se encuentran al final del repo, por lo pronto puedes ver la aplicación en producción usando este link.
+
+https://grupodot-test.vercel.app/
 
 ## Herramientas Usadas
 
@@ -44,11 +51,6 @@ Las API y recursos se encuentran en los siguientes links
 - Para correr este proyecto en local debes primero usar el script definido en el package.json `$ npm run build`, para empaquetar la aplicación con webpack, luego de estar empaquetada ejecutar el script `$ npm run build:dev` para correr.
 - Luego de lo anterior en el puerto 8000 de tu navegador se podra visualizar la aplicación http://localhost:8000/ seguro se abre automaticamente.
 
-## Liga del Proyecto corriendo en producción en un servidor de Vercel.
-
-Si no pudiste ejecutar el proyecto en local puedes contactarme con mis datsos de contacto que se encuentran al final del repo, por lo pronto puedes ver la aplicación en producción usando este link.
-
-https://grupodot-test.vercel.app/
 
 ### Contacto
 
